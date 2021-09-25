@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Devoir Obligatoire 2 (DO-2)}
+
+\begin{document}
+
+\maketitle{Cadre}
+
+On veut simuler selon le vecteur aléatoire $(U, V)$ qui suit une distribution uniforme 
+sur le domaine $\mathcal{D}_k = \lbrace (u, v) \in \mathbb{R}^2 : u^{1/k} + v^{1/k} \leq 1 \rbrace$.
+
+\section{1ère variante: méthode du rejet}
+
+On vous demande de coder dans une fonction simuRejection un simulateur par la méthode du rejet de cette densité. 
+Pour vérifier que votre code produit le bon résultat vous pouvez graphiquer sur le plain un ensemble de points générés.
+Puis, on vous demande d'étudier la dégradation du temps de calcul pour la génération de (disons) 10000 points au fur et 
+mesure que $k$ augmente. Nous aurions besoin de simuler pour de valeurs de $k$ d'environ quelques dizaines.
+
+\section{2ème variante (challenge)}
+
+Pour simuler un vecteur $(U, V)$ on peut simuler d'abord $U$ puis selon la loi conditonnelle de $V|U$. 
+Le problème est alors mathématique car il faut travailler pour obtenir les densités conditionnelles.
+Vous devrez alors obtenir
+
+la densité jointe du couple $U, V$
+la densité marginale de la variable $U$
+la densité conditionnelle de $V|U$
+Puis coder l'algoritme d'échantillonnage (on appelle cette méthode un échantillonage de Gibbs -- Gibbs sampling)
+
+\end{document}
